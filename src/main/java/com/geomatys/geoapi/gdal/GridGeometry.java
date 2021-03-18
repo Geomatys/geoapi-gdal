@@ -98,11 +98,6 @@ class GridGeometry implements GridSpatialRepresentation {
             return size;
         }
 
-        /** Degree of detail in the grid dataset. */
-        @Override public Double getResolution() {
-            return null;
-        }
-
         /** String representation for debugging purpose. */
         @Override public String toString() {
             final StringBuilder b = new StringBuilder().append(size).append(' ').append(getDimensionName().identifier());

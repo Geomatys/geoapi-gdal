@@ -13,14 +13,8 @@
  */
 package com.geomatys.geoapi.gdal;
 
-import java.util.Set;
-import java.util.Collection;
-import java.util.Collections;
-import org.opengis.util.GenericName;
-import org.opengis.util.InternationalString;
-import org.opengis.metadata.citation.Citation;
+import org.opengis.metadata.Identifier;
 import org.opengis.referencing.IdentifiedObject;
-import org.opengis.referencing.ReferenceIdentifier;
 
 
 /**
@@ -30,7 +24,7 @@ import org.opengis.referencing.ReferenceIdentifier;
  * @version 1.0
  * @since   1.0
  */
-abstract class ReferencingObject implements IdentifiedObject, ReferenceIdentifier {
+abstract class ReferencingObject implements IdentifiedObject, Identifier {
     /**
      * Name of this referencing object.
      */
@@ -45,15 +39,7 @@ abstract class ReferencingObject implements IdentifiedObject, ReferenceIdentifie
         this.name = name;
     }
 
-    @Override public final ReferenceIdentifier getName()  {return this;}
-    @Override public final String              getCode()  {return name;}
-    @Override public final String              toString() {return toWKT();}
-
-    /** Unimplemented methods. */
-    @Override public Collection<GenericName>  getAlias()       {return Collections.emptyList();}
-    @Override public Set<ReferenceIdentifier> getIdentifiers() {return Collections.emptySet();}
-    @Override public Citation                 getAuthority()   {return null;}
-    @Override public String                   getCodeSpace()   {return null;}
-    @Override public String                   getVersion()     {return null;}
-    @Override public InternationalString      getRemarks()     {return null;}
+    @Override public final Identifier getName()  {return this;}
+    @Override public final String     getCode()  {return name;}
+    @Override public final String     toString() {return toWKT();}
 }

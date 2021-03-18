@@ -15,7 +15,6 @@ package com.geomatys.geoapi.gdal;
 
 import org.gdal.osr.SpatialReference;
 import org.opengis.metadata.Identifier;
-import org.opengis.metadata.extent.Extent;
 import org.opengis.referencing.crs.CoordinateReferenceSystem;
 import org.opengis.referencing.crs.GeographicCRS;
 import org.opengis.referencing.crs.ProjectedCRS;
@@ -122,7 +121,6 @@ class CRS extends ReferencingObject implements CoordinateReferenceSystem, Coordi
     }
 
     @Override public final InternationalString  getScope()             {return null;}
-    @Override public final Extent               getDomainOfValidity()  {return null;}
     @Override public       CoordinateSystem     getCoordinateSystem()  {return this;}
     @Override public final int                  getDimension()         {return axes.length;}
     @Override public final CoordinateSystemAxis getAxis(int dimension) {return axes[dimension];}
