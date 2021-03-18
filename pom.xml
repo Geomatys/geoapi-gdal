@@ -49,6 +49,12 @@
       <version>3.0.1</version>
     </dependency>
     <dependency>
+      <groupId>org.opengis</groupId>
+      <artifactId>geoapi-conformance</artifactId>
+      <version>3.0.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.gdal</groupId>
       <artifactId>gdal</artifactId>
       <version>3.0.0</version>
@@ -57,12 +63,6 @@
       <groupId>tech.uom</groupId>
       <artifactId>seshat</artifactId>
       <version>1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.opengis</groupId>
-      <artifactId>geoapi-conformance</artifactId>
-      <version>3.0.1</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 
